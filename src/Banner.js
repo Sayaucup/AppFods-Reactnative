@@ -6,9 +6,9 @@ import img3 from './image/banner/tiga.png';
 import img4 from './image/banner/empat.png';
 
 import {SliderBox} from 'react-native-image-slider-box';
-var {height, width} = Dimensions.get('window');
+var {width} = Dimensions.get('window');
 
-export default class Latest extends Component {
+export default class Banner extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,13 +28,12 @@ export default class Latest extends Component {
           resizeMode={'contain'}
           images={this.state.images}
           sliderBoxHeight={200}
-          dotColor="#fe696b"
+          dotColor="#166868"
           inactiveDotColor="#dddddd"
           dotStyle={{
             width: 8,
             height: 8,
             borderRadius: 15,
-            backgroundColor: '#fe696b',
           }}
           paginationBoxStyle={{
             bottom: 0,
@@ -46,14 +45,14 @@ export default class Latest extends Component {
           }}
           paginationBoxVerticalPadding={20}
           autoplay={true}
-          circleLoop
+          circleLoop={true}
           parentWidth={this.state.width}
           ImageComponentStyle={{
             height: width / 3,
             width: width - 15,
-            borderRadius: 7,
+            borderRadius: 5,
           }}
-          imageLoadingColor="#dddddd"
+          imageLoadingColor="#166868"
         />
       </View>
     );
